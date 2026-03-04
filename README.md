@@ -171,3 +171,18 @@ class tcpchatclient {
         }
     }
 }
+
+
+
+EX 5 
+import sys
+from scapy.all import sniff
+
+# Define the packet capturing function
+def packet_handler(packet):
+    # Display packet details
+    packet.show()
+
+# Capture packets on the network interface
+if __name__ == "__main__":
+    sniff(iface="eth0", prn=packet_handler)
